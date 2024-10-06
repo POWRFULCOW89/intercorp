@@ -34,8 +34,7 @@ class OrderController extends Controller
      */
     public function store(StoreOrderRequest $request)
     {
-
-        $productId = $request->input('product_id');
+        $productId = $request->validated()['product_id'];
 
         $order = auth()->user()->orders()->create([
             'product_id' => $productId,
@@ -44,7 +43,7 @@ class OrderController extends Controller
         ]);
 
         return redirect()->route('orders.index', ['product' => $productId])
-            ->with('success', 'Order created successfully!');
+            ->with('success', '¡Orden creada con éxito!');
 
     }
 

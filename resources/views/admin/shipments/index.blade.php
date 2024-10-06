@@ -16,7 +16,6 @@
                 </thead>
                 <tbody>
                 @foreach($shipments as $shipment)
-
                     <tr>
                         <td class="border px-4 py-2">{{ $shipment->id }}</td>
                         <td class="border px-4 py-2">{{ $shipment->tracking_number }}</td>

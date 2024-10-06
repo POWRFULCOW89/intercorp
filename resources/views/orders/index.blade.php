@@ -11,7 +11,7 @@
                 <th class="border px-4 py-2">Total</th>
                 <th class="border px-4 py-2">Fecha</th>
                 <th class="border px-4 py-2">Estatus</th>
-                <th class="border px-4 py-2">Accioness</th>
+                <th class="border px-4 py-2">Acciones</th>
             </tr>
             </thead>
             <tbody>

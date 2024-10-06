@@ -97,9 +97,10 @@
                     <div class="m-6">
                         <h4 class="font-bold text-2xl">{{ $product->name }}</h4>
                         <p class="text-gray-600 my-4">{{ $product->description }}</p>
-                        <button class="uppercase text-sm font-bold text-white bg-orange-600 p-6 rounded-full">Comprar
+                        <a href="{{ route('orders.create', compact('product')) }}"
+                           class="uppercase text-sm font-bold text-white bg-orange-600 p-6 rounded-full">Comprar
                             ahora
-                        </button>
+                        </a>
                     </div>
                 </div>
             @endforeach

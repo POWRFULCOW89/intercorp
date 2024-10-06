@@ -100,6 +100,10 @@
                                 {{ __('Cuenta') }}
                             </div>
 
+                            <x-dropdown-link href="{{ route('orders.index') }}">
+                                {{ __('Mis Órdenes') }}
+                            </x-dropdown-link>
+
                             <x-dropdown-link href="{{ route('profile.show') }}">
                                 {{ __('Perfil') }}
                             </x-dropdown-link>

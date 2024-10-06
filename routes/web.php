@@ -60,6 +60,12 @@ Route::middleware([
 ])->group(function () {
     Route::get('/dashboard', function () {
 
+//        dd(!request()->user() || !request()->user()->isAdmin());
+
+        if (!request()->user() || !request()->user()->isAdmin()) {
+            return redirect()->route('welcome');
+        }
+
         $totalOrders = Order::count();
         $totalShipments = Shipment::count();
 
